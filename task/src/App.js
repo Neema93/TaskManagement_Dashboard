@@ -1,12 +1,13 @@
 
 import './App.css';
-import Login from './components/Login';
+import AppRoute from './router/AppRoute';
 
 function App() {
   return (
     <div className="App">
      <h1> Task Management</h1>
-     <Login />
+     {/* <Login /> */}
+     <AppRoute />
     </div>
   );
 }
