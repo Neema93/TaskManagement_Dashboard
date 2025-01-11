@@ -10,11 +10,13 @@ const initialState = {
         return {
           isAuthenticated: true,
           user: action.payload,
+          error:null
         };
       case "LOGIN_FAILURE":
         return {
-          loading: false,
+           
           error: action.payload,
+
         };
       case "LOGOUT":
         return {
