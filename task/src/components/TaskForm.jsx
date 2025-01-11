@@ -1,5 +1,6 @@
 import React, { useState } from "react";
-
+import DatePicker from "react-datepicker";
+import "react-datepicker/dist/react-datepicker.css";
 const TaskForm = ({ task, onSubmit }) => {
   const [title,setTitle] = useState(task ? task.title : "");
   const [description, setDescription] = useState(task ? task.description : "");
@@ -55,7 +56,7 @@ const TaskForm = ({ task, onSubmit }) => {
         <input 
             type="text"
             autoFocus
-            value={description}
+            value={title}
             onChange={onTitleChange}
             required
         /><br/>

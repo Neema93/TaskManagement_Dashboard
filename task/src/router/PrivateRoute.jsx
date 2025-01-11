@@ -2,7 +2,7 @@ import React, { useEffect } from "react";
 import { connect } from "react-redux";
 import { Navigate, Outlet } from "react-router-dom";
 // import { getExpenses } from "../actions/expenses";
-// import Header from "../components/Header";
+import Header from "../components/Header";
 const PrivateRoute = (props) => {
   const { isAuthenticated } = props;
   useEffect(() => {
@@ -15,8 +15,8 @@ const PrivateRoute = (props) => {
 
   return props.isAuthenticated ? (
     <>
-      {/* <Header /> Render the header here */}
-      <Outlet /> {/* Render the child routes */}
+      <Header /> 
+      <Outlet /> 
     </>
   ) : (
     <Navigate to="/" />
