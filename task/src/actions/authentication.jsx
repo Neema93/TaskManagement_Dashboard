@@ -14,9 +14,13 @@ export const loginFailure = (error) => ({
     return async (dispatch) => {
         
         try {
-            const response = await axios.get(`http://localhost:9000/users/${credentials.username}`);
-            if (response.status === 200 && response.data.user_username === credentials.username && response.data.user_password === credentials.password) {
-               
+            user ={
+                username: "abc",
+                password: 123
+            }
+            //const response = await axios.get(`http://localhost:9000/users/${credentials.username}`);
+            //if ( response.status === 200 && response.data.user_username === credentials.username && response.data.user_password === credentials.password) {
+             if(user.username === credentials.username && user.password === credentials.password)  {
                     dispatch(loginSuccess(response.data));
                
             } else {
