@@ -1,14 +1,16 @@
 import { legacy_createStore as createStore, combineReducers,applyMiddleware} from "redux";
 import {thunk} from 'redux-thunk';
 import authentication from "../reducers/authentication";
-
+import filters from "../reducers/filters";
+import tasks from "../reducers/tasks";
 export default () => {
    
     const store = createStore(
         combineReducers({
 
- 
-            authentication:authentication
+            tasks,
+            filters,
+            authentication
             
         }),applyMiddleware(thunk)
     );
