@@ -5,7 +5,7 @@ const TaskForm = ({ task, onSubmit }) => {
   const [title,setTitle] = useState(task ? task.title : "");
   const [description, setDescription] = useState(task ? task.description : "");
   const [deadline, setDeadline] = useState(task ? task.deadline : new Date());
-  const [status, setStatus] = useState(task ? task.status : ""  );
+  const [status, setStatus] = useState(task ? task.status : "Pending"  );
   const [error, setError] = useState("");
   
   const onTitleChange = (e) => {
@@ -78,7 +78,7 @@ const TaskForm = ({ task, onSubmit }) => {
             <option value="Pending">Pending</option>
             <option value="In Progress">In Progress</option>
             <option value="Completed">Completed</option>
-          </select>
+          </select><br/>
         <button className="form_button">Add Expense</button>
       </form>
     </div>

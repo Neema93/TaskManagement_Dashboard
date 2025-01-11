@@ -5,12 +5,9 @@ const getVisibleTasks = (tasks = [], { title = "", status = "Pending" } = {}) =>
         const titleMatch =
         //   task.title &&
           task.title.toLowerCase().includes(title.toLowerCase());
-        return titleMatch;
+          const statusMatch = task.status.includes(status);
+        return titleMatch && statusMatch;
       })
-      .filter((task)=> {
-        const statusMatch = task.status.includes(status);
-        return statusMatch;
-      })
-
+      
   };
   export default getVisibleTasks;
