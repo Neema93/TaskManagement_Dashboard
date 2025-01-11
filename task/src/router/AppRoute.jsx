@@ -1,7 +1,7 @@
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 import Login from './../components/Login';
 import NotFound from "../components/NotFound";
-import TaskDashbord from "../components/TaskDashbord";
+import TaskDashboard from "../components/TaskDashboard";
 import PrivateRoute from "./PrivateRoute";
 
 const AppRoute = () => {
@@ -10,7 +10,7 @@ const AppRoute = () => {
       <Router>
         <Routes>
           <Route element={<PrivateRoute />}>
-            <Route path="/dashboard" element={<TaskDashbord />} />
+            <Route path="/dashboard" element={<TaskDashboard />} />
           
           </Route>
           <Route path="/" element={<Login />} />

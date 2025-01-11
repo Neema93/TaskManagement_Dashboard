@@ -1,18 +1,30 @@
-import { useState } from "react";
+import { useState, useEffect } from "react";
+import { useDispatch, connect, useSelector } from "react-redux";
+import { login } from "../actions/authentication";
+import { useNavigate } from "react-router-dom";
 const Login = () => {
     const [credentials, setCredentials] = useState({
         username: "",
         password: "",
       });
-
+      const isLoggedIn = useSelector((state) => state.authentication.isAuthenticated);
+      const dispatch = useDispatch();
+      const navigate = useNavigate();
+    
       const handleChange = (e) => {
         const { name, value } = e.target;
         setCredentials({ ...credentials, [name]: value });
       }
       const handleSubmit = (e) => {
         e.preventDefault();
-        console.log(credentials)
+        dispatch(login(credentials));
       }
+      useEffect(() => {
+        if (isLoggedIn) {
+          navigate("/dashboard");
+        }
+      }, [isLoggedIn]);
+    
     return(
         <>
             <form onSubmit={handleSubmit}>
