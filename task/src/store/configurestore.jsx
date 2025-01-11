@@ -3,7 +3,7 @@ import {thunk} from 'redux-thunk';
 import authentication from "../reducers/authentication";
 import filters from "../reducers/filters";
 import tasks from "../reducers/tasks";
-export default () => {
+ const configurestore = () => {
    
     const store = createStore(
         combineReducers({
@@ -16,3 +16,4 @@ export default () => {
     );
     return store;
 }
+export default configurestore;

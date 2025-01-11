@@ -2,7 +2,7 @@ const filtersRedusersDefaultState = {
     title: "",
     status: "Pending",
   };
-  export default (state = filtersRedusersDefaultState, action) => {
+  const filters = (state = filtersRedusersDefaultState, action) => {
     switch (action.type) {
       case "SET_TITLE_FILTER":
         return {
@@ -18,3 +18,4 @@ const filtersRedusersDefaultState = {
         return state;
     }
   };
+  export default filters;

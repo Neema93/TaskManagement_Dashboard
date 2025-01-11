@@ -3,10 +3,11 @@ import './App.css';
 import {Provider} from 'react-redux';
 import AppRoute from './router/AppRoute';
 import configurestore from './store/configurestore';
-
+import getVisibleTasks from './selectors/tasks'
 function App() {
   const store = configurestore();
  const state = store.getState();
+ getVisibleTasks(state.tasks,state.filters)
   return (
     <div className="App">
      <h1> Task Management</h1>

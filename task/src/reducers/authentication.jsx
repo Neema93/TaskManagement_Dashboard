@@ -4,7 +4,7 @@ const initialState = {
     error: null,
   };
   
-  export default (state = initialState, action) => {
+ const authentication = (state = initialState, action) => {
     switch (action.type) {
       case "LOGIN_SUCCESS":
         return {
@@ -27,3 +27,5 @@ const initialState = {
         return state;
     }
   };
+
+  export default authentication;

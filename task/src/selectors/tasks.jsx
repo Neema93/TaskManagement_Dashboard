@@ -1,4 +1,4 @@
-export default (tasks = [], { title = "", status = "Pending" } = {}) => {
+const getVisibleTasks = (tasks = [], { title = "", status = "Pending" } = {}) => {
     const tasksArray = Object.values(tasks);
     return tasksArray
       .filter((task) => {
@@ -13,3 +13,4 @@ export default (tasks = [], { title = "", status = "Pending" } = {}) => {
       })
 
   };
+  export default getVisibleTasks;

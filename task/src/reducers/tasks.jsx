@@ -1,6 +1,6 @@
 const tasksReduserDefaultState = [];
 
-export default (state = tasksReduserDefaultState, action) => {
+const tasks = (state = tasksReduserDefaultState, action) => {
   switch (action.type) {
     case "GET_TASKS":    
       return [...state];
@@ -21,3 +21,5 @@ export default (state = tasksReduserDefaultState, action) => {
       return state;
   }
 };
+
+export default tasks;
