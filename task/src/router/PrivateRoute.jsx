@@ -9,7 +9,7 @@ const PrivateRoute = (props) => {
     if (isAuthenticated) {
     //   props.dispatch(getExpenses()); // Dispatch the action to fetch expenses
     } else {
-      console.warn("User is not authenticated. Cannot fetch expenses.");
+    //   console.warn("User is not authenticated. Cannot fetch expenses.");
     }
   }, [isAuthenticated, props]);
 
