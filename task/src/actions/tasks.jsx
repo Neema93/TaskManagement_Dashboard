@@ -2,7 +2,6 @@
 import {v1 as uuid} from 'uuid';
 export const getTask = () =>({
     type: "GET_TASKS", 
-    tasks
 })
 export const addTask = ({title = '',description = '', deadline = 0, status =  ''} = {}) =>({
     type: 'ADD_TASK',
