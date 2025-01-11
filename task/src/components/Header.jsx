@@ -22,13 +22,7 @@ const Header = () => {
       >
         Create
       </NavLink>
-      &nbsp;&nbsp;
-      <NavLink
-        to="/help"
-        className={({ isActive }) => (isActive ? "active" : "link")}
-      >
-        Help
-      </NavLink>
+     
     </div>
         </>
     )
