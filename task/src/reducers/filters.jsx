@@ -1,6 +1,6 @@
 const filtersRedusersDefaultState = {
     title: "",
-    status: "Pending",
+    status: "",
   };
   const filters = (state = filtersRedusersDefaultState, action) => {
     switch (action.type) {

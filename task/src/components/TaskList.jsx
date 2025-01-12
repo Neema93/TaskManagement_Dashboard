@@ -1,8 +1,6 @@
 import { connect } from "react-redux";
-import TaskListItem from "./TaskListItem";  // Assuming TaskListItem is your row component
-import getVisibleTasks from "../selectors/getVisibleTasks";  // Assuming this is a selector
-import React from 'react';
-
+import TaskListItem from "./TaskListItem";  
+import getVisibleTasks from "../selectors/getVisibleTasks";  
 const TaskList = (props) => {
   const { tasks } = props;
 
@@ -33,7 +31,7 @@ const TaskList = (props) => {
 
 const mapStateToProps = (state) => {
   return {
-    tasks: getVisibleTasks(state.tasks, state.filters),  // Fetch filtered tasks from state
+    tasks: getVisibleTasks(state.tasks, state.filters)
   };
 };
 

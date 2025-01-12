@@ -1,7 +1,8 @@
 export const setTitleFilter = (title = "") => ({
     type: "SET_TITLE_FILTER",
-    text,
+    title
   });
-export const sortByStatus = () => ({
+export const setStatusFilter = (status = "") => ({
     type: "SET_STATUS_FILTER",
+    status
   });

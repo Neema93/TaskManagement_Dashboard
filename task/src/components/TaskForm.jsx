@@ -79,7 +79,7 @@ const TaskForm = ({ task, onSubmit }) => {
             <option value="In Progress">In Progress</option>
             <option value="Completed">Completed</option>
           </select><br/>
-        <button className="form_button">Add Expense</button>
+        <button className="form_button">Add Task</button>
       </form>
     </div>
   );
