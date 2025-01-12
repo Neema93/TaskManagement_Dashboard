@@ -3,5 +3,5 @@ export const setTitleFilter = (title = "") => ({
     text,
   });
 export const sortByStatus = () => ({
-    type: "SORT_BY_STATUS",
+    type: "SET_STATUS_FILTER",
   });

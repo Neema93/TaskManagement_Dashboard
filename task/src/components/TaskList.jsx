@@ -1,20 +1,21 @@
 import { connect } from "react-redux";
-
-import selectTask from "../selectors/tasks";
+import TaskListItem from "./TaskListItem";
+import getVisibleTasks from "../selectors/getVisibleTasks";
+import tasks from "../reducers/tasks";
 const TaskList =(props) => {
+    console.log("props",props);
     const { tasks } = props;
     return (
       <div>
-        {tasks.map((task) => {
-          return <TaskListItem key={task.id} {...task} />;
-        })}
-      </div>
+       {tasks.map((task) => {
+        return <TaskListItem key={task.id} {...task} />;
+      })} 
+    </div> 
     );
 }
 const mapStateToProps = (state) => {
-    const flatTasks = state.tasks[0] || [];
     return {
-      tasks: selectTask(flatTasks, state.filters),
+      tasks: getVisibleTasks(state.tasks, state.filters),
     };
   };
 export default connect(mapStateToProps)(TaskList);

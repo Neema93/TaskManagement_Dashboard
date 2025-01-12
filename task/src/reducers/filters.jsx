@@ -9,7 +9,7 @@ const filtersRedusersDefaultState = {
           ...state,
           title: action.title,
         };
-      case "SORT_BY_STATUS":
+      case "SET_STATUS_FILTER":
         return {
           ...state,
           status: action.status ,

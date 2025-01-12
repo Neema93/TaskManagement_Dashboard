@@ -5,6 +5,7 @@ const tasks = (state = tasksReduserDefaultState, action) => {
     case "GET_TASKS":    
       return [...state];
     case "ADD_TASK":
+        console.log(action.task)
       return [...state, action.task];
     case "EDIT_TASK":
       return state.map((task) => {
@@ -20,6 +21,7 @@ const tasks = (state = tasksReduserDefaultState, action) => {
     default:
       return state;
   }
+  
 };
 
 export default tasks;
