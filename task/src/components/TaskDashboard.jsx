@@ -1,3 +1,4 @@
+import TaskCalendar from "./TaskCalendar";
 import TaskList from "./TaskList";
 import TaskListFilters from "./TaskListFilters";
 
@@ -7,6 +8,7 @@ return (
     <h1> Welcone to dashboard</h1>
     <TaskListFilters />
     <TaskList />
+    <TaskCalendar />
     </>
 )
 }
