@@ -1,8 +1,12 @@
 const TaskListItem = ({title,description,deadline,status}) =>{
     return (
         <>
-      <br/>
-       <span> {title} - {description} - {deadline.toDateString()} -{status}</span>
+       <tr>
+      <td>{title}</td>
+      <td>{description}</td>
+      <td>{deadline.toLocaleDateString()}</td>
+      <td>{status}</td>
+    </tr>
         </>
     )
 }
