@@ -58,12 +58,10 @@ const TaskForm = ({ task, onSubmit }) => {
             autoFocus
             value={title}
             onChange={onTitleChange}
-            required
-        /><br/>
+        /><br/> 
         <label>Description</label>
         <input
           type="text"
-          autoFocus
           value={description}
           onChange={onDescriptionChange}
         /><br/>

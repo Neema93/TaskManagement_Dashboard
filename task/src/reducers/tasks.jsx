@@ -2,8 +2,6 @@ const tasksReduserDefaultState = [];
 
 const tasks = (state = tasksReduserDefaultState, action) => {
   switch (action.type) {
-    case "GET_TASKS":    
-      return [...state];
     case "ADD_TASK":
         console.log(action.task)
       return [...state, action.task];

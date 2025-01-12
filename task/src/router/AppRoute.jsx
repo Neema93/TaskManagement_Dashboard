@@ -4,6 +4,7 @@ import NotFound from "../components/NotFound";
 import TaskDashboard from "../components/TaskDashboard";
 import PrivateRoute from "./PrivateRoute";
 import CreateTask from "../components/CreateTask";
+import EditTask from "../components/EditTask";
 const AppRoute = () => {
   return (
     <>
@@ -12,6 +13,7 @@ const AppRoute = () => {
           <Route element={<PrivateRoute />}>
             <Route path="/dashboard" element={<TaskDashboard />} />
             <Route path="/create" element={<CreateTask />} />
+            <Route path="/edit/:id" element={<EditTask />} />
           </Route>
           <Route path="/" element={<Login />} />
           <Route path="*" element={<NotFound />} />
