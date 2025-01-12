@@ -10,7 +10,7 @@ function App() {
  getVisibleTasks(state.tasks,state.filters)
   return (
     <div className="App">
-     <h1> Task Management</h1>
+  
      <Provider store={store}>
      <AppRoute />
      </Provider>

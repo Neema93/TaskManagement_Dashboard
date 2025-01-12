@@ -3,7 +3,7 @@ import { NavLink } from "react-router-dom";
 const Header = () => {  
     return (
         <>
-          <div >Task Management</div>
+          <h1 >Task Management</h1>
       <div >
         {/* <Logout /> */}
       </div>

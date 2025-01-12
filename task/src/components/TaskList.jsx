@@ -22,7 +22,7 @@ const TaskList = (props) => {
         <p>No tasks available</p>
       ) : (
         <>
-          <table>
+          <table style={{ margin: '0 auto' }}>
             <thead>
               <tr>
                 <th>Title</th>

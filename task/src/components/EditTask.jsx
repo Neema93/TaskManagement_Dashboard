@@ -10,10 +10,10 @@ const EditTask = (props) => {
   return (
     <>
         <TaskForm
-          task={task}  // Pass the expense to the form for editing
+          task={task} 
           onSubmit={(task) => {
-            props.dispatch(editTask(id, task));  // Dispatch edit action
-            doStuff();  // Redirect to dashboard
+            props.dispatch(editTask(id, task)); 
+            doStuff();  
           }}
         />
     </>
