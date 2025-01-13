@@ -9,6 +9,7 @@ const EditTask = (props) => {
   const doStuff = () => navigate("/dashboard", { replace: true });
   return (
     <>
+      <h1>Edit Task</h1>
         <TaskForm
           task={task} 
           onSubmit={(task) => {
