@@ -3,7 +3,6 @@ import { setTitleFilter, setStatusFilter } from "../actions/filters";
 
 const TaskListFilters = (props) => (
   <div>
-   
     <select
       value={props.filters.status}
       onChange={(e) => {

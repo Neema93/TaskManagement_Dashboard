@@ -38,9 +38,8 @@ const TaskCalendar = (props) => {
               <li key={task.id}>
                 <span>
                   <strong>{task.title}</strong>
-                </span>
-                {" "}-{" "}<span>{task.description}</span>
-                {" "}-{" "}<span>{task.status}</span>
+                </span>{" "}
+                - <span>{task.description}</span> - <span>{task.status}</span>
               </li>
             ))}
           </ul>
