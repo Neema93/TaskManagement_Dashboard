@@ -9,7 +9,7 @@ const CreateTask = (props) => {
   const doStuff = (event) => navigate("/dashboard");
   console.log("createTask", props)
   return (
-    <div className="container">
+    <div>
       <h1>Create Task</h1>
       <TaskForm
         onSubmit={(task) => {

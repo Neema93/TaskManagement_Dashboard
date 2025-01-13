@@ -5,7 +5,7 @@ const TaskListItem = ({ id,title, description, deadline, status }) => {
       <tr>
         <td>{title}</td>
         <td>{description}</td>
-        <td>{deadline.toLocaleDateString()}</td>
+        <td>{deadline.toDateString()}</td>
         <td>{status}</td>
         <td>
           

@@ -1,12 +1,12 @@
 import { NavLink } from "react-router-dom";
-// import Logout from "./Logout";
+import Logout from "./Logout";
 const Header = () => {  
     return (
         <>
           <h1 >Task Management</h1>
-      <div >
-        {/* <Logout /> */}
-      </div>
+      
+        
+      
  
     <div >
       <NavLink
@@ -22,7 +22,7 @@ const Header = () => {
       >
         Create
       </NavLink>
-     
+      <Logout />
     </div>
         </>
     )
