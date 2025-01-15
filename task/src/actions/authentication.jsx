@@ -19,8 +19,7 @@ export const loginFailure = (error) => ({
                 password: "123"
             }
             const error = "Username and Password dose not match"
-            //const response = await axios.get(`http://localhost:9000/users/${credentials.username}`);
-            //if ( response.status === 200 && response.data.user_username === credentials.username && response.data.user_password === credentials.password) {
+           
              if(user.username === credentials.username && user.password === credentials.password)  {
                     dispatch(loginSuccess(user));
                

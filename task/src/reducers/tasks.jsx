@@ -3,7 +3,7 @@ const tasksReduserDefaultState = [];
 const tasks = (state = tasksReduserDefaultState, action) => {
   switch (action.type) {
     case "ADD_TASK":
-        console.log(action.task)
+      console.log(action.task);
       return [...state, action.task];
     case "EDIT_TASK":
       return state.map((task) => {
@@ -19,7 +19,6 @@ const tasks = (state = tasksReduserDefaultState, action) => {
     default:
       return state;
   }
-  
 };
 
 export default tasks;
