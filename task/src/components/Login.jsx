@@ -25,7 +25,7 @@ const Login = () => {
     if (isLoggedIn) {
       navigate("/dashboard");
     }
-  }, [isLoggedIn]);
+  }, [isLoggedIn, navigate]);
 
   return (
     <>
