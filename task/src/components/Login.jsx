@@ -28,8 +28,9 @@ const Login = () => {
   }, [isLoggedIn, navigate]);
 
   return (
-    <>
-      <h1>Task Management</h1>
+    <div className="login_container">
+      <div className="login_container_box">
+      <h1 className="login_heading">Task Management</h1>
       <form onSubmit={handleSubmit}>
         <label> UserName</label>
         <input
@@ -47,7 +48,8 @@ const Login = () => {
         />
         <button type="submit">Login</button>
       </form>
-    </>
+      </div>
+    </div>
   );
 };
 export default Login;
