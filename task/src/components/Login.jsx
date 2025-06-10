@@ -31,7 +31,7 @@ const Login = () => {
     <div className="login_container">
       <div className="login_container_box">
       <h1 className="login_heading">Task Management</h1>
-      <form onSubmit={handleSubmit}>
+      <form className="form_body"onSubmit={handleSubmit}>
         <label> UserName</label>
         <input
           type="text"
