@@ -1,5 +1,6 @@
 
 import './App.css';
+import './style/style.scss';
 import { Provider } from 'react-redux';
 import AppRoute from './router/AppRoute';
 import configurestore from './store/configurestore';

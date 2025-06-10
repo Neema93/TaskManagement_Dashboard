@@ -2,7 +2,7 @@ import { useState } from "react";
 import { connect } from "react-redux";
 import Calendar from "react-calendar";
 import "react-calendar/dist/Calendar.css";
-import "./../style/TaskCalendar.css";
+// import "./../style/TaskCalendar.scss";
 const TaskCalendar = (props) => {
   const [selectedDate, setSelectedDate] = useState(new Date());
   const tasksForDate = props.tasks.filter(
