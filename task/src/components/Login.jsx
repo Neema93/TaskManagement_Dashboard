@@ -32,17 +32,19 @@ const Login = () => {
       <div className="login_container_box">
       <h1 className="login_heading">Task Management</h1>
       <form className="form_body"onSubmit={handleSubmit}>
-        <label> UserName</label>
+    
         <input
           type="text"
           name="username"
+          placeholder="UserName"
           value={credentials.username}
           onChange={handleChange}
         />
-        <label> Password </label>
+      
         <input
           type="password"
           name="password"
+          placeholder="password"
           value={credentials.password}
           onChange={handleChange}
         />
