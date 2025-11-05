@@ -20,3 +20,7 @@ color: $dark-grey;
    margin: 0 0 24px 0;
     line-height: 1;
 }
+.login_form{
+    display: flex;
+  flex-direction: column;
+}
