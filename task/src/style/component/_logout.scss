@@ -1,0 +1,19 @@
+.logout-btn {
+  background: none;
+  border: none;
+  color: #000000;
+  font-size: 18px;
+  font-weight: bold;
+  cursor: pointer;
+  text-decoration: none;
+  padding: 0;
+  transition: color 0.3s ease;
+}
+
+.logout-btn:hover {
+  color: #007bff; /* same hover color as nav links */
+}
+
+.logout-btn:active {
+  color: #ff0000; /* active color (optional) */
+}

@@ -1,7 +1,5 @@
 .header {
-    // background: #E7E7E7;
-    // display: flex;
-    overflow: hidden;
+  overflow: hidden;
   background-color: #f1f1f1;
   padding: 20px 10px;
 
@@ -10,10 +8,10 @@
    float: right;
   text-align: center;
   padding: 12px;
-  font-size: 18px;
+  font-size: 16px;
   line-height: 25px;
   border-radius: 4px;
-  font-weight: bold;
+ 
 }
 .link {
   color: #000000;
@@ -22,12 +20,14 @@
 
 /* Hover effect */
 .link:hover {
-  color: #007bff; 
+  color: #007bff;
+  background-color: #ddd; 
 }
 
 /* Active NavLink style */
 .active {
-  color: #ff0000;
+  color: #007bff;
+  background-color: #ddd; 
   text-decoration: underline; 
 }
 .title {
@@ -44,8 +44,4 @@
 .title:hover {
     font-size: 25px;
   font-weight: bold;
-}
-NavLink.active {
- background-color: dodgerblue;
-  color: white;
 }
