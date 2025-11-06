@@ -4,12 +4,12 @@ import TaskListFilters from "./TaskListFilters";
 
 const TaskDashboard = () => {
   return (
-    <>
-      <h1> Welcome to dashboard</h1>
+    <div className="dashbord-container">
+      
       <TaskListFilters />
       <TaskList />
       <TaskCalendar />
-    </>
+    </div>
   );
 };
 export default TaskDashboard;

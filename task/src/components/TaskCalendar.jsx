@@ -19,7 +19,7 @@ const TaskCalendar = (props) => {
     return hasTasks ? "highlight" : "";
   };
   return (
-    <div className="container">
+    <div className="cal-container">
       <div>
         <Calendar
           className="calendar"
