@@ -2,8 +2,7 @@
   background: none;
   border: none;
   color: #000000;
-  font-size: 18px;
-  font-weight: bold;
+  font-size: 16px;
   cursor: pointer;
   text-decoration: none;
   padding: 0;
@@ -11,9 +10,12 @@
 }
 
 .logout-btn:hover {
-  color: #007bff; /* same hover color as nav links */
+  color: #007bff;
+  background-color: #ddd; 
 }
 
 .logout-btn:active {
-  color: #ff0000; /* active color (optional) */
+ color: #007bff;
+  background-color: #ddd; 
+  text-decoration: underline;
 }
