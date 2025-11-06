@@ -8,14 +8,27 @@
 }
  .nav {
    float: right;
-  color: #000000;
   text-align: center;
   padding: 12px;
-  text-decoration: none;
-  font-size: 18px; 
+  font-size: 18px;
   line-height: 25px;
   border-radius: 4px;
   font-weight: bold;
+}
+.link {
+  color: #000000;
+  text-decoration: none;
+}
+
+/* Hover effect */
+.link:hover {
+  color: #007bff; 
+}
+
+/* Active NavLink style */
+.active {
+  color: #ff0000;
+  text-decoration: underline; 
 }
 .title {
     float: left;

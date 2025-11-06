@@ -19,7 +19,7 @@ const Header = () => {
         >
           Create
         </NavLink>
-        <div className="logoutbutton"><Logout /></div>
+       <Logout />
       </div>
     </div>
   );
