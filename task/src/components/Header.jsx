@@ -3,9 +3,9 @@ import Logout from "./Logout";
 const Header = () => {
   return (
     <div className="header">
-      <h1>Task Management</h1>
+      <div className="title">Task Management</div>
 
-      <div>
+      <div className="nav">
         <NavLink
           to="/dashboard"
           className={({ isActive }) => (isActive ? "active" : "link")}
@@ -19,7 +19,7 @@ const Header = () => {
         >
           Create
         </NavLink>
-        <Logout />
+        <div className="logoutbutton"><Logout /></div>
       </div>
     </div>
   );

@@ -5,7 +5,7 @@ import TaskListFilters from "./TaskListFilters";
 const TaskDashboard = () => {
   return (
     <>
-      <h1> Welcone to dashboard</h1>
+      <h1> Welcome to dashboard</h1>
       <TaskListFilters />
       <TaskList />
       <TaskCalendar />
