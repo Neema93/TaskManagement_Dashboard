@@ -2,7 +2,6 @@ import { useState } from "react";
 import { connect } from "react-redux";
 import Calendar from "react-calendar";
 import "react-calendar/dist/Calendar.css";
-// import "./../style/TaskCalendar.scss";
 const TaskCalendar = (props) => {
   const [selectedDate, setSelectedDate] = useState(new Date());
   const tasksForDate = props.tasks.filter(
@@ -18,6 +17,30 @@ const TaskCalendar = (props) => {
     );
     return hasTasks ? "highlight" : "";
   };
+  const getTileContent = ({ date, view }) => {
+  if (view === "month") { // only show in month view
+    const tasksForDay = props.tasks.filter(
+      (task) =>
+        new Date(task.deadline).toDateString() === date.toDateString()
+    );
+
+    if (tasksForDay.length > 0) {
+      return (
+        <div className="task-tile-list">
+          {/* {tasksForDay.length} */}
+        {tasksForDay.slice(0, 5).map((task) => (
+  <li key={task.id}>
+    <strong>{task.title}</strong> - <span>{task.status}</span>
+  </li>
+))}
+{tasksForDay.length > 5 && <li>...</li>}
+        </div>
+      );
+    }
+  }
+  return null;
+};
+
   return (
     <div className="cal-container">
       <div>
@@ -26,6 +49,7 @@ const TaskCalendar = (props) => {
           value={selectedDate}
           onChange={handleDateChange}
           tileClassName={getTileClassName}
+          tileContent={getTileContent}
         />
       </div>
       <div className="task-list">
