@@ -18,7 +18,7 @@ const TaskCalendar = (props) => {
     return hasTasks ? "highlight" : "";
   };
   const getTileContent = ({ date, view }) => {
-  if (view === "month") { // only show in month view
+  if (view === "month") {
     const tasksForDay = props.tasks.filter(
       (task) =>
         new Date(task.deadline).toDateString() === date.toDateString()
