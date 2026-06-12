@@ -12,11 +12,12 @@
   display: flex;
   flex-wrap: wrap;
   justify-content: space-between;
-  gap: 20px;
+  gap: 10px;
 
   .calendar {
-    flex: 1 1 80%;
-    min-width: 700px;
+    flex: 1;
+  min-width: 0;
+  width: 100%;
   }
 
   .task-list {

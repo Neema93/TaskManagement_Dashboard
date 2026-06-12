@@ -1,14 +1,52 @@
-.dashbord-container{
+.dashboard-container {
   display: flex;
-  flex-wrap: wrap;
-  justify-content: space-between;
-  gap: 20px;
-  .search{
-    flex: 1 1 30%;
-    min-width: 100px;
+  gap: 24px;
+  padding: 24px;
+  min-height: 100vh;
+}
+
+.search {
+  flex: 1;
+  min-width: 0;
+}
+
+.calendar {
+  flex: 1;
+  min-width: 0;
+   width: 50%;
+  
+}
+/* Large screens */
+@media (min-width: 1400px) {
+  .calendar {
+    max-width: 500px;
   }
-  .calender {
-    flex: 1 1 65%;
-    min-width: 600px;
+}
+
+/* Tablets */
+@media (max-width: 1024px) {
+  .dashboard-container {
+    gap: 16px;
+  }
+
+  .search {
+    flex: 1.5;
+  }
+
+  .calendar {
+    max-width: 320px;
+  }
+}
+
+/* Mobile */
+@media (max-width: 768px) {
+  .dashboard-container {
+    flex-direction: column;
+  }
+
+  .search,
+  .calendar {
+    width: 100%;
+    max-width: 100%;
   }
 }
