@@ -25,37 +25,90 @@
 }
 
 /* Form styling (if your TaskForm uses basic inputs) */
-.task-container input,
-.task-container textarea,
-.task-container select {
+.task-form {
   width: 100%;
-  padding: 10px 12px;
-  margin-bottom: 12px;
-  border: 1px solid #e5e7eb;
+}
+
+.error-message {
+  background: #fee2e2;
+  color: #dc2626;
+  padding: 12px;
   border-radius: 8px;
-  outline: none;
+  margin-bottom: 16px;
   font-size: 14px;
 }
 
-.task-container input:focus,
-.task-container textarea:focus,
-.task-container select:focus {
-  border-color: #3b82f6;
+.form-group {
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 18px;
+
+  label {
+    font-weight: 600;
+    margin-bottom: 6px;
+    color: #374151;
+  }
+
+  input,
+  textarea,
+  select {
+    padding: 12px;
+    border: 1px solid #d1d5db;
+    border-radius: 8px;
+    font-size: 14px;
+    transition: border-color 0.2s ease;
+
+    &:focus {
+      outline: none;
+      border-color: #2563eb;
+    }
+  }
+
+  textarea {
+    resize: vertical;
+    min-height: 100px;
+  }
 }
 
-/* Button */
-.task-container button {
+.date-picker {
   width: 100%;
-  padding: 10px;
-  background: #3b82f6;
-  color: white;
+}
+
+.react-datepicker-wrapper {
+  width: 100%;
+}
+
+.react-datepicker__input-container {
+  width: 100%;
+
+  input {
+    width: 100%;
+  }
+}
+
+.form-button {
+  width: 100%;
+  padding: 12px;
   border: none;
   border-radius: 8px;
+  background: #2563eb;
+  color: white;
+  font-size: 15px;
+  font-weight: 600;
   cursor: pointer;
-  font-weight: 500;
-  transition: 0.2s;
+  transition: background 0.2s ease;
+
+  &:hover {
+    background: #1d4ed8;
+  }
 }
 
-.task-container button:hover {
-  background: #2563eb;
+@media (max-width: 768px) {
+  .form-group {
+    input,
+    textarea,
+    select {
+      font-size: 16px; // better mobile usability
+    }
+  }
 }

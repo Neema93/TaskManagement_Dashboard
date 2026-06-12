@@ -47,32 +47,53 @@ const TaskForm = ({ task, onSubmit }) => {
   };
 
   return (
-    <div>
-      {error && <p>{error}</p>}
-      <form onSubmit={onSubmitHandler}>
-        <label>Title</label>
-        <input type="text" autoFocus value={title} onChange={onTitleChange} />
-        <br />
-        <label>Description</label>
-        <input type="text" value={description} onChange={onDescriptionChange} />
-        <br />
-        <label>Deadline</label>
-        <DatePicker
-          selected={deadline}
-          onChange={onDeadlineChange}
-          dateFormat="yyyy/MM/dd"
-        />
-        <br />
-        <label>status</label>
-        <select value={status} onChange={onStatusChange}>
-          <option value="Pending">Pending</option>
-          <option value="In Progress">In Progress</option>
-          <option value="Completed">Completed</option>
-        </select>
-        <br />
-        <button className="form_button">Add Task</button>
-      </form>
+  <div className="task-form">
+  {error && <p className="error-message">{error}</p>}
+
+  <form onSubmit={onSubmitHandler}>
+    <div className="form-group">
+      <label>Title</label>
+      <input
+        type="text"
+        autoFocus
+        value={title}
+        onChange={onTitleChange}
+      />
     </div>
+
+    <div className="form-group">
+      <label>Description</label>
+      <textarea
+        value={description}
+        onChange={onDescriptionChange}
+        rows="4"
+      />
+    </div>
+
+    <div className="form-group">
+      <label>Deadline</label>
+      <DatePicker
+        selected={deadline}
+        onChange={onDeadlineChange}
+        dateFormat="yyyy/MM/dd"
+        className="date-picker"
+      />
+    </div>
+
+    <div className="form-group">
+      <label>Status</label>
+      <select value={status} onChange={onStatusChange}>
+        <option value="Pending">Pending</option>
+        <option value="In Progress">In Progress</option>
+        <option value="Completed">Completed</option>
+      </select>
+    </div>
+
+    <button className="form-button">
+      {task ? "Update Task" : "Add Task"}
+    </button>
+  </form>
+</div>
   );
 };
 
