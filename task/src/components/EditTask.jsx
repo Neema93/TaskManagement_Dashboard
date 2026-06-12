@@ -16,10 +16,13 @@ const EditTask = (props) => {
   };
 
   return (
-    <>
-      <h1>Edit Task</h1>
+  
+     <div className="task-page">
+  <div className="task-container">
+    <h1 className="task-title">Edit Task</h1>
       <TaskForm task={task} onSubmit={handleSubmit} />
-    </>
+   </div>
+   </div>
   );
 };
 
