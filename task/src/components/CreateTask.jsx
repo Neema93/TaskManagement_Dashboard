@@ -13,9 +13,11 @@ const CreateTask = (props) => {
   };
 
   return (
-    <div>
-      <h1>Create Task</h1>
-      <TaskForm onSubmit={handleSubmit} />
+    <div className="task-page">
+      <div className="task-container">
+        <h1 className="task-title">Create Task</h1>
+        <TaskForm onSubmit={handleSubmit} />
+      </div>
     </div>
   );
 };
